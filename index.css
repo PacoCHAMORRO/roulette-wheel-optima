@@ -57,24 +57,12 @@
     transform: translate(-50%,-50%);
     margin-top: 100px;
     z-index: 10;
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: white;
     border: 2px solid #333;
     font-family: 'Montserrat';
     font-weight: 900;
     color: #333;
-}
-
-@media only screen and (max-width: 600px) {
-  #spin {
-    width: 60px;
-    height: 60px;
-    font-size: .7rem;
-  }
-
-  #canvas {
-    margin-top: 100px;
-  }
 }
 
 .roulette-container {
@@ -92,4 +80,34 @@
     transform: translate(-50%,-50%);
     margin-top: 100px;
     width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  #spin {
+    width: 90px;
+    height: 90px;
+    font-size: 1rem;
+    margin-top: 200px;
+  }
+
+  #canvas {
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  #spin {
+    width: 55px;
+    height: 55px;
+    font-size: .7rem;
+    margin-top: 100px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  #canvas {
+    margin-top: 100px;
+  }
 }
