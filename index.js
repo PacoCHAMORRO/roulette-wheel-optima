@@ -49,7 +49,8 @@ function drawRouletteWheel() {
   if (canvas.getContext) {
     var outsideRadius = 300;
     var textRadius = 170;
-    var insideRadius = 50;
+    var insideRadius = 48;
+    canvas.height = canvas.width * 1;
 
     ctx = canvas.getContext("2d");
     /* ctx.fillRect(0,10,800,800); */
@@ -58,7 +59,7 @@ function drawRouletteWheel() {
     ctx.strokeStyle = "white";
     ctx.lineWidth = 2;
 
-    ctx.font = 'bold 14px Helvetica, Arial';
+    ctx.font = '600 14px Montserrat, Arial';
 
     for(var i = 0; i < options.length; i++) {
       var angle = startAngle + i * arc;
@@ -66,8 +67,8 @@ function drawRouletteWheel() {
       ctx.fillStyle = getColor(i, options.length);
 
       ctx.beginPath();
-      ctx.arc(400, 400, outsideRadius, angle, angle + arc, false);
-      ctx.arc(400, 400, insideRadius, angle + arc, angle, true);
+      ctx.arc(canvas.width / 2, canvas.width / 2, outsideRadius, angle, angle + arc, false);
+      ctx.arc(canvas.width / 2, canvas.width / 2, insideRadius, angle + arc, angle, true);
       ctx.stroke();
       ctx.fill();
 
@@ -77,8 +78,8 @@ function drawRouletteWheel() {
       ctx.shadowBlur    = 0;
       ctx.shadowColor   = "rgb(220,220,220)";
       ctx.fillStyle = "white";
-      ctx.translate(400 + Math.cos(angle + arc / 2) * textRadius, 
-                    400 + Math.sin(angle + arc / 2) * textRadius);
+      ctx.translate((canvas.width /2) + Math.cos(angle + arc / 2) * textRadius, 
+      (canvas.width /2) + Math.sin(angle + arc / 2) * textRadius);
       // ctx.rotate(angle + arc / 2 +  Math.PI / 2);
       ctx.rotate(angle + arc / 2);
       var text = options[i];
@@ -87,7 +88,7 @@ function drawRouletteWheel() {
     } 
 
     //Arrow
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "#333";
     ctx.beginPath();
     ctx.moveTo(400 - 4, 400 - (outsideRadius + 5));
     ctx.lineTo(400 + 4, 400 - (outsideRadius + 5));
@@ -122,18 +123,20 @@ function rotateWheel() {
 
 function stopRotateWheel() {
   var canvas = document.getElementById("canvas");
+  var prize = document.getElementById("prize");
   clearTimeout(spinTimeout);
   var degrees = startAngle * 180 / Math.PI + 90;
   var arcd = arc * 180 / Math.PI;
   var index = Math.floor((360 - degrees % 360) / arcd);
   ctx.save();
-  ctx.font = 'bold 44px Helvetica, Arial';  
+  ctx.font = '900 44px Montserrat, Arial';  
   var text = options[index];
-  ctx.fillStyle = 'black';
-  console.log(canvas.width);
+  ctx.fillStyle = '#333';
+  console.log(text);
+  prize.textContent = text;
  
-  ctx.fillStyle = 'white';
-  ctx.fillText(text, 400 - ctx.measureText(text).width / 2, 400 + 10);
+  //ctx.fillStyle = 'white';
+  //ctx.fillText(text, 400 - ctx.measureText(text).width / 2, 400 + 10);
   ctx.restore();
 }
 
