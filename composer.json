@@ -1,0 +1,10 @@
+{
+    "name": "paco/roulette-wheel-optima",
+    "authors": [
+        {
+            "name": "Paco Chamorro",
+            "email": "pacochamfi@gmail.com"
+        }
+    ],
+    "require": {}
+}
