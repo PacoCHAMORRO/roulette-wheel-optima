@@ -1,114 +1,114 @@
-*{
-  margin: auto 0;
-  padding: 0;
-  font-family: 'Montserrat';
-  color: #333;
-  box-sizing: border-box;
+* {
+	padding: 0;
+	color: #333;
+	margin: auto 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat';
 }
 
 html {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 body {
-  width: 100%;
-  min-height: 100%;
+	width: 100%;
+	min-height: 100%;
 }
 
 nav {
-  background-color: #15212e;
-  width: 100%;
+	width: 100%;
+	background-color: #15212e;
 }
 
 .main-nav {
-  display: flex;
-  list-style: none;
-  height: 96px;
-  font-size: 1em;
-  margin: 0;
+	margin: 0;
+	height: 96px;
+	display: flex;
+	font-size: 1em;
+	list-style: none;
 }
-  
-li {
-  padding: 20px;
+
+.main-nav > li {
+	width: 100%;
+	padding: 20px;
+	text-align: center;
 }
 
 a {
-  text-decoration: none;
-  color: white;
+	color: white;
+	text-decoration: none;
 }
 
 #prize {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  position: ;
-  z-index: 100;
+	z-index: 100;
+	margin-top: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 #spin {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border-style: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    
-    z-index: 10;
-    font-size: 1rem;
-    background-color: white;
-    border: 2px solid #333;
-    font-family: 'Montserrat';
-    font-weight: 900;
-    color: #333;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	color: #333;
+	width: 90px;
+	height: 90px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 900;
+	border-radius: 50%;
+	border-style: none;
+	position: absolute;
+	border: 2px solid #333;
+	background-color: white;
+	font-family: 'Montserrat';
+	transform: translate(-50%, -50%);
 }
 
 .roulette-container {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: relative;
 }
 
 #canvas {
-    position: relative;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
-    /* margin-top: 100px; */
-    width: 100%;
+	position: relative;
+	/* top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); */
+	/* margin-top: 100px; */
+	width: 100%;
 }
 
 /* @media only screen and (min-width: 540px) {
-  #spin {
-    width: 90px;
-    height: 90px;
-    font-size: 1rem;
-    margin-top: 200px;
-  }
+	#spin {
+		width: 90px;
+		height: 90px;
+		font-size: 1rem;
+		margin-top: 200px;
+	}
 
-  #canvas {
-    margin-top: 200px;
-  }
+	#canvas {
+		margin-top: 200px;
+	}
 }
 
 @media only screen and (max-width: 320px) {
-  #spin {
-    width: 55px;
-    height: 55px;
-    font-size: .7rem;
-    margin-top: 100px;
-  }
+	#spin {
+		width: 55px;
+		height: 55px;
+		font-size: .7rem;
+		margin-top: 100px;
+	}
 
-  h1 {
-    font-size: 1.2rem;
-  }
+	h1 {
+		font-size: 1.2rem;
+	}
 
-  #canvas {
-    margin-top: 100px;
-  }
+	#canvas {
+		margin-top: 100px;
+	}
 } */
