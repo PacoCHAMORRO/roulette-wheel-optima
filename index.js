@@ -134,7 +134,17 @@ function drawRouletteWheel()
 
 function spin()
 {
-	if (getCookie(das_cookie)) return;
+	if (!navigator.cookieEnabled)
+	{
+		alert('¡Las cookies necesitan estar habilitadas!');
+
+		window.location.reload(true);
+	}
+
+	if (getCookie(das_cookie))
+	{
+		return;
+	}
 
 	spinAngleStart = Math.random() * 10 + 10;
 	spinTime = 0;
