@@ -1,4 +1,4 @@
-var options = ["15% DE DESC EN TARIFA", "ASCENSO DE CATEGORÍA", "CHOFER ADICIONAL", "5% DE DESC EN TARIFA", "SILLA DE BEBÉ GRATIS", "10% DE DESC. EN TARIFA"];
+var options = ["15% DE DESC. EN TARIFA", "ASCENSO DE CATEGORÍA", "CHOFER ADICIONAL", "5% DE DESC. EN TARIFA", "SILLA DE BEBÉ GRATIS", "10% DE DESC. EN TARIFA"];
 
 var startAngle = -2.08;
 var arc = Math.PI / (options.length / 2);
