@@ -1,4 +1,4 @@
-var options = ["15% DE DESCUENTO EN TARIFA", "ASCENSO DE CATEGORÍA GRATIS", "CHOFER ADICIONAL", "5% DE DESCUENTO EN TARIFA", "SILLA DE BEBÉ GRATIS", "10% DE DESCUENTO EN TARIFA"];
+var options = ["15% DE DESC EN TARIFA", "ASCENSO DE CATEGORÍA", "CHOFER ADICIONAL", "5% DE DESC EN TARIFA", "SILLA DE BEBÉ GRATIS", "10% DE DESC. EN TARIFA"];
 
 var startAngle = -2.08;
 var arc = Math.PI / (options.length / 2);
@@ -68,11 +68,13 @@ function drawRouletteWheel()
 		textRadius    = canvas.width * .28; // 22% of canvas width;
 		insideRadius  = canvas.width * .05;
 
-		if (canvas.width < 600)
+		if (screen.width < 300)
+    {
+      ctx.font = '600 .45rem Montserrat, Arial';
+    } else if (screen.width >= 300 && screen.width < 480)
 		{
-			ctx.font = '600 .5rem Montserrat, Arial';
-		}
-		else if (canvas.width > 600 && canvas.width <= 1024)
+			ctx.font = '600 .55rem Montserrat, Arial';
+		} else if (screen.width >= 480 && screen.width <= 1024)
 		{
 			ctx.font = '600 1rem Montserrat, Arial';
 		}

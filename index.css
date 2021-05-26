@@ -52,8 +52,8 @@ a {
 	left: 50%;
 	z-index: 10;
 	color: #333;
-	width: 90px;
-	height: 90px;
+	width: 80px;
+	height: 80px;
 	cursor: pointer;
 	font-size: 1rem;
 	font-weight: 900;
@@ -81,6 +81,16 @@ a {
 	transform: translate(-50%,-50%); */
 	/* margin-top: 100px; */
 	width: 100%;
+}
+
+@media all and (max-width: 480px) {
+	#spin {
+		width: 60px;
+		height: 60px;
+		font-size: .75rem;
+	}
+
+
 }
 
 /* @media only screen and (min-width: 540px) {
